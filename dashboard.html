@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="navbar">
+    Authenticity Validator Dashboard
+</div>
+
+<center>
+
+    <div class="dashboard-card">
+        <h3>Total Certificates</h3>
+        <h1>250</h1>
+    </div>
+
+    <div class="dashboard-card">
+        <h3>Verified</h3>
+        <h1>200</h1>
+    </div>
+
+    <div class="dashboard-card">
+        <h3>Fake Detected</h3>
+        <h1>50</h1>
+    </div>
+
+    <br><br>
+
+    <form action="/upload_pdf" method="POST" enctype="multipart/form-data">
+
+        <h3>Upload Certificate PDF</h3>
+
+        <input type="file"
+               name="certificate"
+               accept=".pdf"
+               required>
+
+        <br><br>
+
+        <button type="submit">
+            Verify Certificate
+        </button>
+
+    </form>
+
+    <br><br>
+
+    <a href="/admin">
+        <button>
+            Admin Dashboard
+        </button>
+    </a>
+
+</center>
+
+</body>
+</html>

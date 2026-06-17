@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Certificate Verification</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="navbar">
+Certificate Verification
+</div>
+
+<div class="container">
+
+<div class="card">
+
+<h2>Enter Certificate ID</h2>
+
+<form action="/verify" method="POST">
+
+<input type="text"
+name="certificate_id"
+placeholder="Enter Certificate ID">
+
+<button type="submit">
+Verify
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</body>
+</html>
