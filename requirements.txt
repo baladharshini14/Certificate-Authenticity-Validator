@@ -2,3 +2,5 @@ Flask
 mysql-connector-python
 PyPDF2
 gunicorn
+qrcode
+Pillow
