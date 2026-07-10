@@ -1,6 +1,9 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, redirect, send_file
 import mysql.connector
 import PyPDF2
+import re
+import qrcode
+import os
 
 app = Flask(__name__)
 
